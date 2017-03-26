@@ -1,6 +1,6 @@
 # ubuntu 下安装nfs #
 
-     $ sudo apt-get install nfs-kernel-server`
+     $ sudo apt-get install nfs-kernel-server
 
 配置nfs
 

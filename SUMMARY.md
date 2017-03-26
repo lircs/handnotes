@@ -1,6 +1,5 @@
-# Summary
+# CONTENTS
 
-* [README](README.md)
 * [0. Introduction](docs/Introduction.md)
 * [1. chapter1](docs/chapter1/chapter1.md)
   * [101](101.md)

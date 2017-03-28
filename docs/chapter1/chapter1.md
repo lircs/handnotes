@@ -1,7 +1,7 @@
 # Contents of chapter 1
 
 * [01 总线、设备、驱动模型](docs/chapter1/20170326-总线、设备、驱动模型.md)
-* [02 驱动程序框架](/docs/chapter1/02-qu-dong-cheng-xu-kuang-jia.md)
+* [02 驱动程序框架](/docs/chapter1/02-驱动程序框架.md)
 
 
 

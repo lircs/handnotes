@@ -6,9 +6,15 @@
 
 ## chapter2
 
-Linux 相关的练习及各类环境的搭建。
+Linux 操作技巧
 
 ## chapter3
 
 Linux 内核源码相关的笔记。
+
+## chapter4
+
+概念类及硬知识。
+
+
 

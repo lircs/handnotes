@@ -1,3 +1,7 @@
+#  \[TIPS\] error: implicit declaration of function 'class\_create'
+
+---
+
 编译驱动时提示如下错误：
 
 内核版本：linux-2..6.25.8

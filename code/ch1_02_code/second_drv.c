@@ -29,6 +29,7 @@ ssize_t second_drv_read(struct file *file, char __user *buf, size_t size, loff_t
 
 
 static struct file_operations sencod_drv_fops = {
+    .owner  =   THIS_MODULE,    /* 这是一个宏，推向编译模块时自动创建的__this_module变量 */
     .open   =   second_drv_open,     
 	.read	=	second_drv_read,	   
 };

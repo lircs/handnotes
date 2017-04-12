@@ -13,3 +13,4 @@
   * [01 linux-0.11阅读笔记](/docs/chapter3/ch3_01-linux-0.11阅读笔记.md)
 * [4. chapter4](/docs/chapter4/chapter4.md)
   * [01 RJ45接口定义](/docs/chapter4/ch4_01-RJ45接口定义.md)
+  * [02 C语言结构体](/docs/chapter4/ch4_02-C语言结构体.md)

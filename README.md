@@ -2,11 +2,11 @@
 
 ## chapter1
 
-编程练习。
+主要存放linux驱动学习过程中的记录，总结。
 
 ## chapter2
 
-Linux 操作技巧
+关于Linux 系统操作技巧
 
 ## chapter3
 
@@ -14,5 +14,4 @@ Linux 内核源码学习
 
 ## chapter4
 
-概念类及硬知识。
-
+概念类及硬件设计知识。

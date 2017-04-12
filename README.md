@@ -1,17 +1,21 @@
 所有文章的组织目录位于[SUMMARY.MD](SUMMARY.md)
 
-## chapter1
+## [chapter1](/docs/chapter1/chapter1.md)
 
-主要存放linux驱动学习过程中的记录，总结。
+linux驱动学习笔记及总结。
 
-## chapter2
+## [chapter2](/docs/chapter2/chapter2.md)
 
-关于Linux 系统操作技巧
+Linux 系统操作技巧学习
 
-## chapter3
+## [chapter3](/docs/chapter3/chapter3.md)
 
 Linux 内核源码学习
 
-## chapter4
+## [chapter4](/docs/chapter4/chapter4.md)
 
-理论知识，主要包括语言类、算法类、硬件类。
+编程语言相关的知识
+
+## [chapter5](/docs/chapter5/chapter5.md)
+
+硬件相关的知识

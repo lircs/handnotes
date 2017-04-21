@@ -19,3 +19,5 @@ Linux 内核源码学习
 ## [chapter5](/docs/chapter5/chapter5.md)
 
 硬件相关的知识
+
+## [chapter6](/docs/chapter6/chapter6.md)

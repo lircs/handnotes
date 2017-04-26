@@ -21,3 +21,5 @@ Linux 内核源码学习
 硬件相关的知识
 
 ## [chapter6](/docs/chapter6/chapter6.md)
+
+算法和数据结构

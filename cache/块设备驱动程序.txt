@@ -1,0 +1,56 @@
+nand flash是一个存储芯片
+
+问1.原理图上NAND FLASH 和 S3C2440之间只有数据线，怎么传输地址
+答1. 在DATA0~DATA7上既传输数据，
+
+怎么操作NAND FLASH
+1 发出命令
+2 发来地址
+3 发出数据 /读写数据
+
+            nand flash                             s3c2440
+发命令         选中芯片                               NFCMD = 命令值()
+              cle设为高电平
+              在data上输出命令值
+              发出一个写脉冲
+
+发地址           选中芯片                             NFADDR = 地址值()
+              ale设为高电平
+              在data上输出地址值
+              发出一个写脉冲
+
+发数据           选中芯片                             NFDATA = 数据值()
+              ale cle设为低电平
+              在data上输出数据值
+              发出一个写脉冲
+
+读数据           选中芯片                        value = NFDATA
+              发出一个读脉冲
+              读data上上数据
+
+
+用u-boot来体验NAND FLASH
+1 读id
+  选中
+  发出命令0x90
+  发出地址0x00
+  读数据得到0xec
+  读数据得到device code
+  退出读id状态
+
+2 读0地址数据
+  nand dump 0
+
+                                s3c2440                       u-boot
+  选中                       NFCONT的bit1设为0            md.l 0x4E000004 1; mw.l 0x4E000004 1
+  发出命令0x00               NFCMMD = 0x00                mw.b 0x4E000008 0x00
+  发出地址0x00               NFADDR = 0x00                mw.b 0x4E00000C 0x00
+  发出地址0x00               NFADDR = 0x00                mw.b 0x4E00000C 0x00
+  发出地址0x00               NFADDR = 0x00                mw.b 0x4E00000C 0x00
+  发出地址0x00               NFADDR = 0x00                mw.b 0x4E00000C 0x00
+  发出地址0x00               NFADDR = 0x00                mw.b 0x4E00000C 0x00
+  发出命令0x30               NFCMMD = 0x30                mw.b 0x4E000008 0x30
+  读数据得到                 val = NFDATA                 md.b 0x4E000010 1
+  读数据得到                 val = NFDATA                 md.b 0x4E000010 1
+  读数据得到                 val = NFDATA                 md.b 0x4E000010 1
+  退出读数据状态             NFCMMD = 0xff                md.b 0x4E000008 0xff  

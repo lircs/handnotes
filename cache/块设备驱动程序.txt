@@ -53,4 +53,28 @@ nand flash是一个存储芯片
   读数据得到                 val = NFDATA                 md.b 0x4E000010 1
   读数据得到                 val = NFDATA                 md.b 0x4E000010 1
   读数据得到                 val = NFDATA                 md.b 0x4E000010 1
-  退出读数据状态             NFCMMD = 0xff                md.b 0x4E000008 0xff  
+  退出读数据状态             NFCMMD = 0xff                md.b 0x4E000008 0xff
+
+
+参考：
+
+框架：
+static int s3c_nand_init()
+{
+  /* 1、分配一个nand_chip结构体 */
+    s3c_nand = kzalloc(sizeof(struct nand_chip), GFP_KERNEL);
+
+  /* 2、设置nand_chip */
+  /* 设置nand_chip是给nand_scan函数使用的，如果不知道怎么设置，先看nand_scan怎么使用
+   * 它应该提供：发命令、发地址、发数据、
+   */
+
+
+
+  /* 3、分配一个nand_chip结构体 */
+  /* 4、分配一个nand_chip结构体 */
+  return 0;
+}
+
+
+内核中自带的nor flash驱动程序的位置:/drivers/mtd/maps/physmap.c

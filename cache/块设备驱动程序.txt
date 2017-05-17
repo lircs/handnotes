@@ -78,3 +78,5 @@ static int s3c_nand_init()
 
 
 内核中自带的nor flash驱动程序的位置:/drivers/mtd/maps/physmap.c
+
+nor flash和nand flash 框架有一部分是重合的，编写时我们可以抽象出一套兼容的代码。

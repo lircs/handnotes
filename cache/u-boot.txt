@@ -162,3 +162,34 @@ u-boot
 1 u-boot的主要作用是为了启动内核，那么在启动内核的过程中，首先要能够配置内核，而我们实验用的
   内核镜像是在主机上面的(也就是在windows 或者是在ubuntu上)。它首先要做的是能够把内核镜像从主机上面
   下载到开发板。
+
+下载：fastboot和tftp的方式
+fastboot的方式是通过usb线进行数据传输
+tftp：是通过有线网络传输的。
+
+
+2.1.9 常用命令
+1 movi
+  开发板如果用sd卡/EMMC /iNAND等作为flash，则在uboot中操作flash的指令movi（或mmc）
+2 nand
+
+3 mm mw md
+  md (mememry display)
+
+4 bootm go
+
+环境变量：
+5 bootdelay
+
+6 ipaddr severip gateway netmask ethaddr
+
+7 bootcmd
+  set bootcmd 'movi read kernel 0x30008000; bootm 0x30008000'
+
+8 bootargs
+
+
+
+  movi read {u-boot | kernel} {addr}
+  解释：这个命令使用了一种通用型的描述方法来描述：movi 和read 外面没有任何标记，说明每一次使用这个
+  指令都是必须的。一对大括号{}括起来的部分必选1个，大括号中的竖线表示多选一，中括号[]表示可选参数（可以有也可以没有）

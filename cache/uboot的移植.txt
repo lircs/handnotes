@@ -1,2 +1,22 @@
 1 从三星官方uboot开始移植
-  
+2.11.1
+  移植前的准备工作。
+
+2.11.2 ubuntu14.04上网及安装openssh
+  1 网络配置文件  /etc/network/interface 文件，配置网卡信息(ip 是静态ip还是dhcp)
+  2 ubuntu 14.04中，重启网卡ifdown eth0 / ifup eth0
+
+2.11.3 移植初体验
+  1 解压
+  2 检查Makefile中的交叉编译工具链是否正确。
+  3 配置时使用: make smdkv210single_config, 对应include/configs/smdkv210single.h
+  4 配置完成后直接make编译，编译完成后就进入烧录步骤。
+  5 uboot/sd_fusing目录下有个sd_fusing.sh脚本，用来烧录。
+
+  命令：file filename
+
+  6 运行结果是：1、串口无输出; 第二，开发板供电锁存成功
+    分析运行结果：uboo中串口最早的输出在"OK",在lowlevel_init.S中初始化串口时打印出来的;
+    串口无输出"O"说明在打印"OK"之前已经死掉了;开发板供电锁存在lolevel_init.S中，开发板
+    供电锁存成功说明在这个代码之前的部分是没问题的。两个结合起来得到结论：错误在开发板供电锁存代码
+    和串口初始化打印"OK"代码之间。

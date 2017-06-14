@@ -38,4 +38,4 @@ int main(void)
 
 这种使用方法在编译时报错。
 
-![20170614_ch4_6_1](\images\chapter4\20170614_ch4_6_1.png)
+![20170614_ch4_6_1](/handnotes/images/chapter4/20170614_ch4_6_1.png)
